@@ -1,8 +1,11 @@
+:root{
+  --shadow-color: rgb(128, 128, 128);
+}
 * {
   box-sizing: border-box;
 }
 html {
-  background-color: gray;
+  background-color: white;
 }
 body {
   font-family: "Playfair Display", "Roboto";
@@ -13,8 +16,8 @@ body {
   margin-left: auto;
   margin-right: auto;
   box-shadow:
-    12px 0 15px -4px rgba(0, 55, 162, 0.97),
-    -12px 0 8px -4px rgba(0, 55, 162, 0.97);
+    12px 0 15px -4px rgba(128, 128, 128, 0.97),
+    -12px 0 8px -4px rgba(128, 128, 128, 0.97);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,6 +31,7 @@ body {
     padding: 20px;
     padding-left: 20%;
     padding-right: 20%;
+    background-image: linear-gradient(170deg, #0891b2 55%, White calc(55% + 2px));
   }
   #portrait {
     height: 80%;
@@ -53,11 +57,15 @@ body {
   
   #about-me {
     width: 100%;
-    height: 60%;
+    height: 65%;
     padding-left: 20px;
     padding-top: 40px;
     padding-bottom: 40px;
+    background-color: white;
+    color: black;
+    box-shadow: 2px 2px 5px black;
   }
+
   
   #about-me h2 {
     font-size: 28px;
@@ -87,7 +95,18 @@ body {
     padding-left: 20%;
     padding-right: 20%;
   }
-  
+  #portfolio h2 {
+    align-self: flex-start;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  footer > .contact-portrait {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://placehold.co/600x400);
+    padding-bottom: 10px;
+    transition: transform;
+  }
  
 
   
@@ -100,6 +119,7 @@ body {
     display: flex;
     position: relative;
     justify-content: center;
+    background-image: linear-gradient(170deg, #0891b2 55%, White calc(55% + 2px));
     
   }
   #portrait{
@@ -120,7 +140,9 @@ body {
     z-index: 2;
     display: block;
     text-align: end;
-    
+    background-color: white;
+    color: black;
+    box-shadow: 2px 2px 5px black;
   }
   #about-me>h2{
     transform: translate(-12.5%);
@@ -162,20 +184,113 @@ body {
     text-wrap: wrap;
     word-break: break-all;
   }
+  #portfolio h2 {
+    align-self: flex-start;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  footer > .contact-portrait {
+    height: 100%;
+    width: 100%;
+    background-image: url(https://placehold.co/600x400);
+    padding-bottom: 10px;
+    transition: transform;
+  }
 }
 @media (max-width: 600px){
+  #about-container{
+    height: 800px;
+    box-shadow: none;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    background-image: linear-gradient(150deg, #0891b2 40%, White calc(40% + 2px));
+    align-items: center;
+    
+  }
+  #portrait{
+    height: 70%;
+    width: 60%;
+    background-image: url(https://placehold.co/600x400);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top: 32px;
+  }
+  #name{
+    color: white;
+    font-size: xx-large;
+    text-align: center;
+  }
+  #about-me{
+    padding-top: 35px;
+    padding-bottom: 30px;
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  #about-me>h2,
+  #about-links{
+    text-align: center;
+    
+  }
+  #about-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  #portfolio>h2{
+    text-align: center;
+    align-self: center;
+  }
+  footer#contact {
+    background-color: #0891b2;
+    color: white;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
 
+  }
+  #email-address,
+  #phone-number
+ {
+    overflow: wrap;
+    text-wrap: wrap;
+    word-break: break-all;
+  }
+
+  .contact-info{
+    padding-top: 24px;
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: larger;
+    flex: 1;
+    padding-bottom: 48px;
+  }
+  .contact-info>.contact-header{
+    align-self: center;
+  }
+  footer > .contact-portrait {
+    height: 50%;
+    width: 100%;
+    background-image: url(https://placehold.co/600x400);
+    transition: transform;
+  }
+  .contact-info>.contact-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 #about-container {
   /* background-color: #0891B2; */
-  background-image: linear-gradient(170deg, #0891b2 55%, White calc(55% + 2px));
+  
 }
-#about-me {
-  background-color: white;
-  color: black;
-  box-shadow: 2px 2px 5px black;
-}
+
 
 #about-links a {
   margin-right: 10px;
@@ -202,11 +317,7 @@ body {
   flex-direction: column;
 }
 
-#portfolio h2 {
-  align-self: flex-start;
-  font-size: 28px;
-  margin-bottom: 20px;
-}
+
 
 .project-card-container {
   display: grid;
@@ -287,13 +398,7 @@ footer#contact a {
   margin: 0;
 }
 
-footer > .contact-portrait {
-  height: 100%;
-  width: 100%;
-  background-image: url(https://placehold.co/600x400);
-  padding-bottom: 10px;
-  transition: transform;
-}
+
 
 .contact-header{
   font-size: xx-large;
