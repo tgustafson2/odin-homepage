@@ -1,0 +1,262 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: gray;
+}
+body {
+  font-family: "Playfair Display", "Roboto";
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  max-width: 1775px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow:
+    12px 0 15px -4px rgba(0, 55, 162, 0.97),
+    -12px 0 8px -4px rgba(0, 55, 162, 0.97);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#about-container {
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  padding-left: 20%;
+  padding-right: 20%;
+  /* background-color: #0891B2; */
+  background-image: linear-gradient(170deg, #0891b2 55%, White calc(55% + 2px));
+}
+
+#portrait {
+  height: 80%;
+  width: 40%;
+  background-image: url(https://placehold.co/600x400);
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: flex-end;
+  align-items: center;
+  padding-bottom: 10px;
+  transition: transform;
+}
+
+#portrait:hover {
+  transform: scale(1.1);
+}
+
+/* #portrait img {
+  object-fit: contain;
+} */
+
+#name {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+#about-me {
+  background-color: white;
+  color: black;
+  box-shadow: 2px 2px 5px black;
+  width: 100%;
+  height: 60%;
+  padding-left: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#about-me h2 {
+  font-size: 28px;
+  margin: 0;
+}
+
+#about-me p {
+  font-size: 16px;
+}
+
+#about-links {
+  display: flex;
+  align-items: center;
+}
+
+.spacer {
+  flex: 1;
+}
+
+#about-links a {
+  margin-right: 10px;
+}
+
+#about-links a img {
+  width: 25px;
+  height: 25px;
+}
+
+#portfolio {
+  padding-left: 20%;
+  padding-right: 20%;
+  background-color: #ffffff;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#portfolio h2 {
+  align-self: flex-start;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.project-card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-auto-rows: 375px 375px;
+  grid-auto-flow: row;
+  gap: 20px;
+  padding-bottom: 5%;
+}
+
+.project-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  text-align: left;
+  width: auto;
+  box-shadow: 2px 2px 5px gray;
+  transition: transform;
+}
+
+.project-card:hover {
+  transform: scale(1.1);
+}
+
+.screenshot {
+  background-color: #ddd;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #555;
+  font-size: 14px;
+}
+
+.card-info {
+  padding-top: 2%;
+  padding-left: 6%;
+  padding-right: 6%;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.card-header h6 {
+  font-size: 16px;
+  margin: 0;
+  flex: 1;
+}
+
+.card-header a {
+  display: flex;
+  align-items: center;
+  margin-right: 5%;
+}
+
+.card-header a img {
+  width: 25px;
+  height: 25px;
+}
+
+.card-header svg {
+  width: 25px;
+  height: 25px;
+}
+
+footer#contact {
+  background-color: #0891b2;
+  color: white;
+  padding: 40px;
+  text-align: left;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 400px;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+
+footer#contact p {
+  margin: 10px 0;
+}
+
+footer#contact a {
+  color: white;
+  text-decoration: none;
+  margin: 0;
+}
+
+footer > .contact-portrait {
+  height: 100%;
+  width: 100%;
+  background-image: url(https://placehold.co/600x400);
+  padding-bottom: 10px;
+  transition: transform;
+}
+
+.contact-header{
+  font-size: xx-large;
+}
+
+.contact-links{
+  display: grid;
+  grid-template-columns: 25px;
+  grid-auto-flow: column;
+  gap: 16px;
+}
+
+.contact-links img{
+  width: 30px;
+  height: 30px;
+}
+
+#phone-icon svg,
+#email-icon svg{
+  height: 30px;
+  color: white;
+  justify-self: center;
+  align-self: center;
+}
+
+.email,
+.phone{
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  align-items: center;
+  font-size: large;
+}
+.contact-text{
+  font-size: larger;
+}
+
+#email-icon,
+#phone-icon{
+  justify-self: center;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
