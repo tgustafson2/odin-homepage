@@ -286,6 +286,10 @@ body {
   }
 }
 
+a{
+  cursor: pointer;
+}
+
 #about-container {
   /* background-color: #0891B2; */
   
