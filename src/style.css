@@ -1,5 +1,6 @@
-:root{
-  --shadow-color: rgb(128, 128, 128);
+:root {
+  --shadow-color: rgba(128, 128, 128, 0.97);
+  --accent-color: #0891b2;
 }
 * {
   box-sizing: border-box;
@@ -16,14 +17,14 @@ body {
   margin-left: auto;
   margin-right: auto;
   box-shadow:
-    12px 0 15px -4px rgba(128, 128, 128, 0.97),
-    -12px 0 8px -4px rgba(128, 128, 128, 0.97);
+    12px 0 15px -4px var(--shadow-color),
+    -12px 0 8px -4px var(--shadow-color);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 1200px) {
-  #about-container{
+  #about-container {
     height: 400px;
     display: flex;
     align-items: center;
@@ -31,12 +32,16 @@ body {
     padding: 20px;
     padding-left: 20%;
     padding-right: 20%;
-    background-image: linear-gradient(170deg, #0891b2 55%, White calc(55% + 2px));
+    background-image: linear-gradient(
+      170deg,
+      var(--accent-color) 55%,
+      White calc(55% + 2px)
+    );
   }
   #portrait {
     height: 80%;
     width: 40%;
-    background-image: url(https://placehold.co/600x400);
+    background-image: url("./20240711_153757.jpg");
     display: flex;
     flex-direction: column;
     color: white;
@@ -44,8 +49,10 @@ body {
     align-items: center;
     padding-bottom: 10px;
     transition: transform;
+    background-size: cover;
+    background-position: center;
   }
-  
+
   #portrait:hover {
     transform: scale(1.1);
   }
@@ -54,7 +61,7 @@ body {
     font-weight: bold;
     margin-top: 10px;
   }
-  
+
   #about-me {
     width: 100%;
     height: 65%;
@@ -66,26 +73,25 @@ body {
     box-shadow: 2px 2px 5px black;
   }
 
-  
   #about-me h2 {
     font-size: 28px;
     margin: 0;
   }
-  
+
   #about-me p {
     font-size: 16px;
   }
-  
+
   #about-links {
     display: flex;
     align-items: center;
   }
-  
+
   .spacer {
     flex: 1;
   }
   footer#contact {
-    background-color: #0891b2;
+    background-color: var(--accent-color);
     color: white;
     padding: 40px;
     text-align: left;
@@ -103,38 +109,42 @@ body {
   footer > .contact-portrait {
     height: 100%;
     width: 100%;
-    background-image: url(https://placehold.co/600x400);
+    background-image: url("./20240711_153845.jpg");
     padding-bottom: 10px;
     transition: transform;
+    background-size: cover;
+    background-position: center;
   }
- 
-
-  
 }
 
-@media (min-width: 601px) and (max-width:1199px){
-  #about-container{
+@media (min-width: 601px) and (max-width: 1199px) {
+  #about-container {
     height: 600px;
     box-shadow: none;
     display: flex;
     position: relative;
     justify-content: center;
-    background-image: linear-gradient(170deg, #0891b2 55%, White calc(55% + 2px));
-    
+    background-image: linear-gradient(
+      170deg,
+      var(--accent-color) 55%,
+      White calc(55% + 2px)
+    );
   }
-  #portrait{
+  #portrait {
     height: 60%;
     width: 40%;
-    background-image: url(https://placehold.co/600x400);
+    background-image: url("./20240711_153757.jpg");
     float: left;
-    transform: translate(40%,15%);
+    transform: translate(40%, 15%);
     z-index: 3;
     position: relative;
+    background-size: cover;
+    background-position: center;
   }
-  #about-me{
+  #about-me {
     padding-top: 35px;
     padding-bottom: 30px;
-    transform: translate(-30%,40%);
+    transform: translate(-30%, 40%);
     width: 60%;
     height: 60%;
     z-index: 2;
@@ -144,10 +154,10 @@ body {
     color: black;
     box-shadow: 2px 2px 5px black;
   }
-  #about-me>h2{
+  #about-me > h2 {
     transform: translate(-12.5%);
   }
-  #about-me>p{
+  #about-me > p {
     width: 60%;
     height: 60%;
     text-align: end;
@@ -155,7 +165,7 @@ body {
     transform: translateX(140%);
     width: 40%;
   }
-  #about-links{
+  #about-links {
     display: none;
   }
   #name {
@@ -167,7 +177,7 @@ body {
     padding-top: 10px;
   }
   footer#contact {
-    background-color: #0891b2;
+    background-color: var(--accent-color);
     color: white;
     padding: 40px;
     text-align: left;
@@ -178,8 +188,7 @@ body {
     padding-right: 10%;
   }
   #email-address,
-  #phone-number
- {
+  #phone-number {
     overflow: wrap;
     text-wrap: wrap;
     word-break: break-all;
@@ -192,38 +201,45 @@ body {
   footer > .contact-portrait {
     height: 100%;
     width: 100%;
-    background-image: url(https://placehold.co/600x400);
+    background-image: url("./20240711_153845.jpg");
     padding-bottom: 10px;
     transition: transform;
+    background-size: cover;
+    background-position: center;
   }
 }
-@media (max-width: 600px){
-  #about-container{
+@media (max-width: 600px) {
+  #about-container {
     height: 800px;
     box-shadow: none;
     display: flex;
     position: relative;
     justify-content: center;
     flex-direction: column;
-    background-image: linear-gradient(150deg, #0891b2 40%, White calc(40% + 2px));
+    background-image: linear-gradient(
+      150deg,
+      var(--accent-color) 40%,
+      White calc(40% + 2px)
+    );
     align-items: center;
-    
   }
-  #portrait{
+  #portrait {
     height: 70%;
     width: 60%;
-    background-image: url(https://placehold.co/600x400);
+    background-image: url("./20240711_153757.jpg");
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     margin-top: 32px;
+    background-size: cover;
+    background-position: center;
   }
-  #name{
+  #name {
     color: white;
     font-size: xx-large;
     text-align: center;
   }
-  #about-me{
+  #about-me {
     padding-top: 35px;
     padding-bottom: 30px;
     width: 60%;
@@ -231,38 +247,35 @@ body {
     display: flex;
     flex-direction: column;
   }
-  #about-me>h2,
-  #about-links{
+  #about-me > h2,
+  #about-links {
     text-align: center;
-    
   }
-  #about-links{
+  #about-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-  #portfolio>h2{
+  #portfolio > h2 {
     text-align: center;
     align-self: center;
   }
   footer#contact {
-    background-color: #0891b2;
+    background-color: var(--accent-color);
     color: white;
     text-align: left;
     display: flex;
     flex-direction: column;
     height: 800px;
-
   }
   #email-address,
-  #phone-number
- {
+  #phone-number {
     overflow: wrap;
     text-wrap: wrap;
     word-break: break-all;
   }
 
-  .contact-info{
+  .contact-info {
     padding-top: 24px;
     padding-left: 16px;
     padding-right: 16px;
@@ -270,29 +283,26 @@ body {
     flex: 1;
     padding-bottom: 48px;
   }
-  .contact-info>.contact-header{
+  .contact-info > .contact-header {
     align-self: center;
   }
   footer > .contact-portrait {
     height: 50%;
     width: 100%;
-    background-image: url(https://placehold.co/600x400);
+    background-image: url("./20240711_153845.jpg");
     transition: transform;
+    background-size: cover;
+    background-position: center;
   }
-  .contact-info>.contact-links{
+  .contact-info > .contact-links {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
 }
 
-a{
+a {
   cursor: pointer;
-}
-
-#about-container {
-  /* background-color: #0891B2; */
-  
 }
 
 
@@ -305,11 +315,6 @@ a{
   height: 25px;
 }
 
-/* #portrait img {
-  object-fit: contain;
-} */
-
-
 
 #portfolio {
   padding-left: 20%;
@@ -321,12 +326,10 @@ a{
   flex-direction: column;
 }
 
-
-
 .project-card-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-auto-rows: 375px 375px;
+  grid-auto-rows: 500px 500px;
   grid-auto-flow: row;
   gap: 20px;
   padding-bottom: 5%;
@@ -337,8 +340,15 @@ a{
   border: 1px solid #ddd;
   text-align: left;
   width: auto;
-  box-shadow: 2px 2px 5px gray;
+  box-shadow: 2px 2px 5px var(--shadow-color);
   transition: transform;
+}
+.project-card {
+  overflow: scroll;
+}
+
+.project-card::-webkit-scrollbar {
+  width: 0px;
 }
 
 .project-card:hover {
@@ -353,6 +363,8 @@ a{
   justify-content: center;
   color: #555;
   font-size: 14px;
+  background-size: cover;
+  background-position: center;
 }
 
 .card-info {
@@ -390,8 +402,6 @@ a{
   height: 25px;
 }
 
-
-
 footer#contact p {
   margin: 10px 0;
 }
@@ -402,26 +412,24 @@ footer#contact a {
   margin: 0;
 }
 
-
-
-.contact-header{
+.contact-header {
   font-size: xx-large;
 }
 
-.contact-links{
+.contact-links {
   display: grid;
   grid-template-columns: 25px;
   grid-auto-flow: column;
   gap: 16px;
 }
 
-.contact-links img{
+.contact-links img {
   width: 30px;
   height: 30px;
 }
 
 #phone-icon svg,
-#email-icon svg{
+#email-icon svg {
   height: 30px;
   color: white;
   justify-self: center;
@@ -429,19 +437,19 @@ footer#contact a {
 }
 
 .email,
-.phone{
+.phone {
   display: grid;
   grid-template-columns: 30px 1fr;
   gap: 10px;
   align-items: center;
   font-size: large;
 }
-.contact-text{
+.contact-text {
   font-size: larger;
 }
 
 #email-icon,
-#phone-icon{
+#phone-icon {
   justify-self: center;
   align-self: center;
   display: flex;
@@ -449,7 +457,7 @@ footer#contact a {
   justify-content: center;
 }
 
-.contact-info{
+.contact-info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
